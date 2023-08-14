@@ -11,11 +11,19 @@ def generate_test_cases(nums):
 
 
 coderust_cases = generate_test_cases([1, 3, 9, 10, 12])
+coderust_cases_v2 = [
+    ([], 12, -1),
+    ([0, 1], 1, 1),
+    ([1, 2, 3], 3, 2),
+    ([-1, 0, 3, 5, 9, 12], 9, 4),
+    ([-1, 0, 3, 5, 9, 12], 2, -1)
+]
 even_len_cases = generate_test_cases([0, 3, 5, 8])
 
 test_cases = [
     *coderust_cases,
     *even_len_cases,
+    *coderust_cases_v2
 ]
 
 
