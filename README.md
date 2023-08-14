@@ -9,6 +9,12 @@ Python 3.9.13
 python -m pytest tests
 ```
 
+# Run benchmarks
+
+```bash
+python benchmark/time_binary_search.py
+```
+
 # Todo
 
 

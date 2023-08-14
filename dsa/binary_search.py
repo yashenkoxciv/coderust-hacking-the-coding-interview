@@ -42,32 +42,3 @@ def binary_search_rec(nums, target, low, high):
 def binary_search_recursive(nums, target):
     return binary_search_rec(nums, target, 0, len(nums) - 1)
 
-
-if __name__ == '__main__':
-    r = binary_search([1, 3, 9, 10, 12], 9)
-    print(r)
-
-    r = binary_search([1, 3, 9, 10, 12], 1)
-    print(r)
-
-    r = binary_search([1, 3, 9, 10, 12], 12)
-    print(r)
-
-    print('*'*12)
-
-    # r = binary_search_recursive([1, 3, 9, 10, 12], 9)
-    # print(r)
-
-    # r = binary_search_recursive([1, 3, 9, 10, 12], 1)
-    # print(r)
-
-    r = binary_search_recursive([1, 3, 9, 10, 12], 12)
-    print(r)
-
-    # r = binary_search([1, 2, 3, 4, 5], 2)
-    # print(r)
-
-    # r = binary_search([1, 2, 4, 5], 1)
-    # print(r)
-
-

@@ -1,5 +1,5 @@
 import pytest
-from binary_search import binary_search, binary_search_recursive
+from dsa.binary_search import binary_search, binary_search_recursive
 
 
 def generate_test_cases(nums):
