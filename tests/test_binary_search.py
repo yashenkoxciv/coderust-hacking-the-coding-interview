@@ -1,5 +1,6 @@
 import pytest
 from dsa.binary_search import binary_search, binary_search_recursive
+from dsa.binary_search_v2 import binary_search_v2
 
 
 def generate_test_cases(nums):
@@ -37,5 +38,12 @@ def test_binary_search(nums, target, expected_idx):
 @pytest.mark.parametrize('nums,target,expected_idx', test_cases)
 def test_binary_search_recursive(nums, target, expected_idx):
     result_idx = binary_search_recursive(nums, target)
+
+    assert result_idx == expected_idx
+
+
+@pytest.mark.parametrize('nums,target,expected_idx', test_cases)
+def test_binary_search_v2(nums, target, expected_idx):
+    result_idx = binary_search_v2(nums, target)
 
     assert result_idx == expected_idx
