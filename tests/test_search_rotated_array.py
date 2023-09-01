@@ -1,5 +1,5 @@
 import pytest
-from dsa.search_rotated_array import search_rotated_array
+from dsa.search_rotated_array import search_rotated_array, search_rotated_array_recursive_client
 
 
 examples = [
@@ -22,4 +22,9 @@ def test_search_rotated_array(nums, target, expected_idx):
     assert target_idx == expected_idx
 
 
+@pytest.mark.parametrize('nums,target,expected_idx', test_cases)
+def test_search_rotated_array_recursive(nums, target, expected_idx):
+    target_idx = search_rotated_array_recursive_client(nums, target)
+
+    assert target_idx == expected_idx
 
