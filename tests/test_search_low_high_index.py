@@ -1,5 +1,5 @@
 import pytest
-from dsa.search_low_high_index import (
+from dsa.arrays.search_low_high_index import (
     naive_search_low_high_target_index,
     search_low_target_index,
     search_high_target_index,

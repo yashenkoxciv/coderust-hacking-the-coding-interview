@@ -1,5 +1,5 @@
 import pytest
-from dsa.rotate_array_by_n import rotate_array_by_n_v3
+from dsa.arrays.rotate_array_by_n import rotate_array_by_n_v3
 
 
 examples = [

@@ -1,5 +1,5 @@
 import pytest
-from dsa.search_rotated_array import search_rotated_array, search_rotated_array_recursive_client
+from dsa.arrays.search_rotated_array import search_rotated_array, search_rotated_array_recursive_client
 
 
 examples = [

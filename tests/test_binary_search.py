@@ -1,6 +1,6 @@
 import pytest
-from dsa.binary_search import binary_search, binary_search_recursive
-from dsa.binary_search_v2 import binary_search_v2
+from dsa.arrays.binary_search import binary_search, binary_search_recursive
+from dsa.arrays.binary_search_v2 import binary_search_v2
 
 
 def generate_test_cases(nums):

@@ -1,5 +1,5 @@
 import pytest
-from dsa.rotate_array_by_n import reverse_array
+from dsa.arrays.rotate_array_by_n import reverse_array
 
 
 # def generate_test_cases(nums):

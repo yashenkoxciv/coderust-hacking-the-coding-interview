@@ -1,5 +1,5 @@
 import pytest
-from dsa.smallest_common_number_from_arrays import smallest_common_number_from_arrays
+from dsa.arrays.smallest_common_number_from_arrays import smallest_common_number_from_arrays
 
 
 examples = [
