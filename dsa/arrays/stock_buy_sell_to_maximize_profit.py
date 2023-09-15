@@ -28,6 +28,26 @@ def naive_stock_buy_sell_to_maximize_profit(stock_nums):
     return buy_price, sell_price
 
 
+def stock_buy_sell_to_maximize_profit(stock_nums):
+    if not stock_nums or len(stock_nums) < 2:
+        return None, None
+
+    current_profit = float('-inf')
+    current_buy = stock_nums[0]
+    global_sell = stock_nums[1]
+    global_profit = global_sell - current_buy
+
+    for i in range(1, len(stock_nums)):
+        current_profit = stock_nums[i] - current_buy
+        if current_profit > global_profit:
+            global_profit = current_profit
+            global_sell = stock_nums[i]
+        if stock_nums[i] < current_buy:
+            current_buy = stock_nums[i]
+    
+    return (global_sell - global_profit), global_sell
+
+
 if __name__ == '__main__':
     # stock_nums = [7, 1, 5, 3, 6, 4]
     # expected_buy_day, expected_sell_day = 2, 5
