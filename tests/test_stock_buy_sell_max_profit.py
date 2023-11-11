@@ -1,7 +1,8 @@
 import pytest
 from dsa.arrays.stock_buy_sell_to_maximize_profit import (
     naive_stock_buy_sell_to_maximize_profit,
-    stock_buy_sell_to_maximize_profit
+    stock_buy_sell_to_maximize_profit,
+    stock_buy_sell_v1
 )
 
 
@@ -33,3 +34,10 @@ def test_stock_buy_sell_to_maximize_profit(stock_nums, expected_buy_day, expecte
     assert buy_day == expected_buy_day
     assert sell_day == expected_sell_day
 
+
+@pytest.mark.parametrize('stock_nums,expected_buy_day,expected_sell_day', test_cases)
+def test_stock_buy_sell_to_maximize_profit_v1(stock_nums, expected_buy_day, expected_sell_day):
+    buy_day, sell_day = stock_buy_sell_v1(stock_nums)
+
+    assert buy_day == expected_buy_day
+    assert sell_day == expected_sell_day

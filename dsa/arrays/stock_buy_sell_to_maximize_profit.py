@@ -48,6 +48,29 @@ def stock_buy_sell_to_maximize_profit(stock_nums):
     return (global_sell - global_profit), global_sell
 
 
+def stock_buy_sell_v1(stock_nums):
+    if len(stock_nums) < 2:
+        return None, None
+    
+    current_buy = stock_nums[0]
+    current_sell = stock_nums[1]
+    best_profit = current_sell - current_buy
+    current_profit = float('-inf')
+
+    for i, num in enumerate(stock_nums[1:]):  # stock_nums[2:]
+        current_profit = num - current_buy
+        
+        if current_profit > best_profit:
+            best_profit = current_profit
+            current_sell = num
+        
+        if num < current_buy:
+            current_buy = num
+    
+    return (current_sell - best_profit), current_sell
+        
+
+
 if __name__ == '__main__':
     # stock_nums = [7, 1, 5, 3, 6, 4]
     # expected_buy_day, expected_sell_day = 2, 5
